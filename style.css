@@ -1,0 +1,262 @@
+body {
+  background: url('/img/photo.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.login-box, .dashboard-box {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+h1, h2 {
+  text-align: center;
+}
+
+#dashboard{
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  text-align: center;
+  width: 300px;
+}
+
+.login-logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #1a5edb;
+}
+
+
+input[type="text"], input[type="password"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3498db;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+#surat-jalan {
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+}
+
+#daftar-barang p {
+  margin: 5px 0;
+}
+.welcome-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #3498db; /* warna biru */
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.header .text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header img {
+  height: 60px; /* Atur ukuran logo */
+}
+.header1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;      /* Mendukung responsif saat layar sempit */
+  padding: 10px;
+}
+
+.logo-container {
+  background-color:; /* Latar khusus area logo */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;     /* Tinggi konsisten untuk setiap logo */
+  margin-right: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+}
+.dashboard-header {
+  @media (max-width: 600px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .dashboard-logo {
+    margin: 0 0 10px 0;
+  }
+
+  .dashboard-title {
+    font-size: 20px;
+  }
+}
+
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+}
+
+.dashboard-logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  margin: 0;
+}
+@media screen and (max-width: 600px) {
+  .container, .login-box {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  input, select, button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  table {
+    font-size: 14px;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .header1 .logo {
+    max-height: 40px;
+  }
+}
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.menu-buttons button {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* Tambahkan ke css/style.css jika belum ada */
+.menu-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+

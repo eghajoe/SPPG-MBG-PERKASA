@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pilihan Menu</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: #007BFF;
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header img {
+      height: 40px;
+      margin-right: 15px;
+    }
+
+    .menu-container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .menu-container button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+    }
+
+    .menu-container button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div id="dashboard">
+<header class="dashboard-header">
+  <img src="img/logo.png" alt="Logo" class="dashboard-logo">
+  <img src="img/logo-bgn.png" alt="Logo" class="dashboard-logo">
+  <h1 class="dashboard-title">SPPG MBG PERKASA</h1>
+</header>
+
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <div class="menu-container">
+    <h1>Selamat Datang</h1>
+    <p>Silakan pilih menu:</p>
+
+    <div class="menu-buttons">
+      <button onclick="window.location.href='dashboard.html'">Dashboard 1 (Input Sekolah)</button>
+      <button onclick="window.location.href='dashboard2.html'">Dashboard 2 (Gudang Kering & Basah)</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

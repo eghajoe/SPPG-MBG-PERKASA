@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Gudang</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <header class="dashboard-header">
+  <img src="img/logo.png" alt="Logo" class="dashboard-logo">
+  <img src="img/logo-bgn.png" alt="Logo" class="dashboard-logo">
+  <h1 class="dashboard-title">SPPG MBG PERKASA</h1>
+</header>
+
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "menu.html";
+    }
+  </script>
+
+<div id="dashboard">
+  <div class="container">
+    <h1>Dashboard Gudang Kering & Basah</h1>
+    <div id="welcome-user" class="welcome-text"></div>
+    <button onclick="logout()">Logout</button>
+    <button onclick="resetData()">Reset Data</button>
+
+    <h2>Input Barang</h2>
+    <label for="jenis-gudang">Jenis Gudang:</label>
+    <select id="jenis-gudang">
+      <option value="Kering">Kering</option>
+      <option value="Basah">Basah</option>
+    </select>
+
+    <input type="text" id="nama-barang" placeholder="Nama Barang" />
+    <input type="number" id="jumlah-barang" placeholder="Jumlah" />
+    <select id="jenis-transaksi">
+      <option value="Masuk">Masuk</option>
+      <option value="Keluar">Keluar</option>
+    </select>
+    <button onclick="tambahTransaksi()">Submit</button>
+
+    <h2>Riwayat Gudang</h2>
+    <button onclick="exportExcel()">Export Excel</button>
+    <table id="tabel-riwayat" border="1">
+      <thead>
+        <tr>
+          <th>Gudang</th>
+          <th>Nama Barang</th>
+          <th>Jumlah</th>
+          <th>Jenis</th>
+          <th>Tanggal</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="js/dashboard2.js"></script>
+</body>
+</html>

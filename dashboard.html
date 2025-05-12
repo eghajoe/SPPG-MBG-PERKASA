@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard INPUT KIRIM MBG</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "index.html";
+    }
+  </script>
+<header class="dashboard-header">
+  <img src="img/logo.png" alt="Logo" class="dashboard-logo">
+  <img src="img/logo-bgn.png" alt="Logo" class="dashboard-logo">
+  <h1 class="dashboard-title">SPPG MBG PERKASA</h1>
+</header>
+
+  <div id="dashboard">
+    <h1>DISTRIBUSI MBG PERKASA</h1>
+    <div id="welcome-user" class="welcome-text"></div>
+    <button onclick="logout()">Logout</button>
+    <button onclick="resetData()">Reset Data</button>
+
+    <h2>Input Makan Masuk</h2>
+    <label>Nama Sekolah:</label>
+    <select id="masuk-sekolah">
+      <option value="">-- Pilih Sekolah --</option>
+      <option value="SDN 01">SDN 01</option>
+      <option value="SMPN 02">SMPN 02</option>
+      <option value="SMAN 03">SMAN 03</option>
+      <option value="SMKN 04">SMKN 04</option>
+    </select>
+    <input type="number" id="masuk-jumlah" placeholder="Jumlah Masuk">
+    <button onclick="tambahBarangMasuk()">Submit Masuk</button>
+
+    <h2>Input Makan Kirim</h2>
+    <label>Nama Sekolah:</label>
+    <select id="keluar-sekolah">
+      <option value="">-- Pilih Sekolah --</option>
+      <option value="SDN 01">SDN 01</option>
+      <option value="SMPN 02">SMPN 02</option>
+      <option value="SMAN 03">SMAN 03</option>
+      <option value="SMKN 04">SMKN 04</option>
+    </select>
+    <input type="number" id="keluar-jumlah" placeholder="Jumlah Keluar">
+    <button onclick="tambahBarangKeluar()">Submit Keluar</button>
+
+    <h2>Riwayat Transaksi</h2>
+    <button onclick="exportExcel()">Export Excel</button>
+    <table id="tabel-stok" border="1">
+      <thead>
+        <tr>
+          <th>Nama Sekolah</th>
+          <th>Jumlah</th>
+          <th>Jenis</th>
+          <th>Tanggal</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="surat-jalan" style="display:none;">
+      <h2>Input Surat Jalan</h2>
+      <div id="daftar-barang"></div>
+      <p><label>Pengirim: <input type="text" id="pengirim"></label></p>
+      <p><label>Penerima: <input type="text" id="penerima"></label></p>
+      <p><strong>Tanggal Kirim:</strong> <span id="tanggal-kirim"></span></p>
+      <button onclick="cetakSuratJalan()">Cetak Surat Jalan</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
