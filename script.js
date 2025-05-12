@@ -155,13 +155,13 @@ function cetakSuratJalan() {
       <div class="text">
         SPPG MBG PERKASA
       </div>
-      <img src="img/logo.png" alt="Logo PT">
+      <img src="logo.png" alt="Logo PT">
     </div>
 <h1>Surat Jalan</h1>
     <div class="kontak-info">
       <p>
-        <img src="img/wa.png" alt="WA"> 0812-3456-7890 &nbsp; | &nbsp;
-        <img src="img/email.png" alt="Email"> admin@mbgperkasa.co.id
+        <img src="wa.png" alt="WA"> 0812-3456-7890 &nbsp; | &nbsp;
+        <img src="email.png" alt="Email"> admin@mbgperkasa.co.id
       </p>
     </div>
       ${daftarBarang}
