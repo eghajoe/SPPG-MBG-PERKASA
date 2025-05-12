@@ -1,5 +1,5 @@
 body {
-  background: url('/img/photo.jpg') no-repeat center center fixed;
+  background: url('photo.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 .login-box, .dashboard-box {
